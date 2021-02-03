@@ -22,7 +22,7 @@ function Result(){
             prn('비겼습니다.');
         }else if (User == "가위" && com == "바위"){
             prn('졌습니다.');
-        }else if (Userㄱ == "바위" && com == "보"){
+        }else if (User == "바위" && com == "보"){
             prn('졌습니다.');
         }else if (User == "바위" && com == "가위"){
             prn('이겼습니다.');
