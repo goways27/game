@@ -6,7 +6,7 @@
     max-width:1000px;
     margin: 0px auto;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     margin-top: 30px;
 }
@@ -19,6 +19,7 @@
 #computerImg{
     width:370px;
     height: 212px;
+    cursor:not-allowed;
 }
 .vs{
     margin-top: 70px;
@@ -46,4 +47,10 @@
     background-color:rgba(255, 0, 0, 0.123);
     border-radius: 100px;
     transition-duration: 0.4s
+}
+.restart{
+    font-size: 20px;
+}
+h1{
+    margin-bottom: 100px;
 }

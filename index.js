@@ -1,7 +1,6 @@
 const user = document.getElementById("user");
 const computer = document.getElementById("computer");
 const com = ComputerValue();
-const computerImg = document.getElementsByClassName("computerImg");
 
 function ComputerValue(){
     let RandomNumber = Math.floor(Math.random()*3)+1;
@@ -13,8 +12,12 @@ function ComputerValue(){
         return "보";
     }
 }
+
 function rock(){
+    ComputerValue();
     let UserChoice = '바위'
+    document.getElementById('scissorsimg').style.display = "none";
+    document.getElementById('paperimg').style.display = "none";
     if (UserChoice == com){
         draw();
         document.getElementById('computerImg').src='img/computer_R.png';
@@ -29,6 +32,8 @@ function rock(){
 
 function scissors(){
     let UserChoice = '가위'
+    document.getElementById('rockimg').style.display = "none";
+    document.getElementById('paperimg').style.display = "none";
     if (UserChoice == com){
         draw();
         document.getElementById('computerImg').src='img/computer_S.png';
@@ -43,6 +48,8 @@ function scissors(){
 
 function paper(){
     let UserChoice = '보'
+    document.getElementById('rockimg').style.display = "none";
+    document.getElementById('scissorsimg').style.display = "none";
     if (UserChoice == com){
         draw();
         document.getElementById('computerImg').src='img/computer_P.png';
@@ -54,31 +61,28 @@ function paper(){
         document.getElementById('computerImg').src='img/computer_R.png';
     }
 }
-
 function win(){
     user.innerHTML = "WIN";
     user.style.color = "red";
-    user.style.backgroundColor = "rgba(255, 0, 0, 0.123)"
+    user.style.backgroundColor = "rgba(255, 0, 0, 0.123)";
     computer.innerHTML = "LOSE";
     computer.style.color = "BLUE";
-    computer.style.backgroundColor = "rgba(10, 87, 230, 0.205)"
-    
+    computer.style.backgroundColor = "rgba(10, 87, 230, 0.205)";
 }
-
 function lose(){
     computer.innerHTML = "WIN";
     computer.style.color = "red";
-    computer.style.backgroundColor = "rgba(255, 0, 0, 0.123)"
+    computer.style.backgroundColor = "rgba(255, 0, 0, 0.123)";
     user.innerHTML = "LOSE";
     user.style.color = "BLUE";
-    user.style.backgroundColor = "rgba(10, 87, 230, 0.205)"
+    user.style.backgroundColor = "rgba(10, 87, 230, 0.205)";
 }
 
-function draw(){;
+function draw(){
     computer.innerHTML = "DRAW";
     user.innerHTML = "DRAW";
     computer.style.color = "red";
-    computer.style.backgroundColor = "rgba(255, 0, 0, 0.123)"
+    computer.style.backgroundColor = "rgba(255, 0, 0, 0.123)";
     user.style.color = "red";
-    user.style.backgroundColor = "rgba(255, 0, 0, 0.123)"
+    user.style.backgroundColor = "rgba(255, 0, 0, 0.123)";
 }
