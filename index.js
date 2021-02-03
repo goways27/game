@@ -13,18 +13,17 @@ function ComputerValue(){
         return "보";
     }
 }
-
 function rock(){
     let UserChoice = '바위'
     if (UserChoice == com){
         draw();
-        document.getElementById('computerImg').src='computer_R.png';
+        document.getElementById('computerImg').src='img/computer_R.png';
     } else if (com == "보"){
         lose();
-        document.getElementById('computerImg').src='computer_P.png';
+        document.getElementById('computerImg').src='img/computer_P.png';
     } else if (com == "가위"){
         win();
-        document.getElementById('computerImg').src='computer_S.png';
+        document.getElementById('computerImg').src='img/computer_S.png';
     }
 }
 
@@ -32,13 +31,13 @@ function scissors(){
     let UserChoice = '가위'
     if (UserChoice == com){
         draw();
-        document.getElementById('computerImg').src='computer_S.png';
+        document.getElementById('computerImg').src='img/computer_S.png';
     } else if (com == "바위"){
         lose();
-        document.getElementById('computerImg').src='computer_R.png';
+        document.getElementById('computerImg').src='img/computer_R.png';
     } else if (com == "보"){
         win();
-        document.getElementById('computerImg').src='computer_P.png';
+        document.getElementById('computerImg').src='img/computer_P.png';
     }
 }
 
@@ -46,13 +45,13 @@ function paper(){
     let UserChoice = '보'
     if (UserChoice == com){
         draw();
-        document.getElementById('computerImg').src='computer_P.png';
+        document.getElementById('computerImg').src='img/computer_P.png';
     } else if (com == "가위"){
         lose();
-        document.getElementById('computerImg').src='computer_S.png';
+        document.getElementById('computerImg').src='img/computer_S.png';
     } else if (com == "바위"){
         win();
-        document.getElementById('computerImg').src='computer_R.png';
+        document.getElementById('computerImg').src='img/computer_R.png';
     }
 }
 

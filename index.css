@@ -16,10 +16,14 @@
     justify-content: center;
     align-items: center;
 }
+#computerImg{
+    width:370px;
+    height: 212px;
+}
 .vs{
     margin-top: 70px;
-    width:100px;
-    height: 100px;
+    width:70px;
+    height: 70px;
 }
 #user{
     margin-top: 60px;
@@ -35,6 +39,8 @@
 .rock, .scissors, .paper{
     margin: 50px; 
     cursor: pointer;
+    width:200px;
+    height: 160px;
 }
 .r:hover, .s:hover, .p:hover{
     background-color:rgba(255, 0, 0, 0.123);
