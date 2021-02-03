@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding:0;
+}
+.container{
+    max-width:1000px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.computer{
+    margin-top: 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.vs{
+    margin-top: 70px;
+    width:100px;
+    height: 100px;
+}
+#user{
+    margin-top: 60px;
+}
+.rsp{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.r, .s, .p{
+    margin: 30px;
+}
+.rock, .scissors, .paper{
+    margin: 50px; 
+    cursor: pointer;
+}
+.r:hover, .s:hover, .p:hover{
+    background-color:rgba(255, 0, 0, 0.123);
+    border-radius: 100px;
+    transition-duration: 0.4s
+}

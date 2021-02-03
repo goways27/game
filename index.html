@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>가위바위보</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class= "container">
+        <div id="computer">
+            COMPUTER
+        </div>
+        <div class="computer">
+            <img src="computer.png" id="computerImg">
+        </div>
+        <div>
+            <img src="vs.png" class="vs">
+        </div>
+        <div id="user">
+            USER
+        </div>
+        <div class="rsp">
+            <div class="r">
+                <img src="rock.png" width="300" class="rock" onclick="rock()">
+            </div>
+            <div class="s">
+                <img src="scissors.png" width="300" class= "scissors" onclick="scissors()">
+            </div>
+            <div class="p">
+                <img src="paper.png" width="300" class= "paper"onclick="paper()">
+            </div>
+        </div>
+    </div>
 </body>
 <Script src="index.js"></Script>
 </html>

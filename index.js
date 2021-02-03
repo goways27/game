@@ -1,6 +1,7 @@
-function prn(e){
-    document.write("<h1>"+ e +"</h1>")
-}
+const user = document.getElementById("user");
+const computer = document.getElementById("computer");
+const com = ComputerValue();
+const computerImg = document.getElementsByClassName("computerImg");
 
 function ComputerValue(){
     let RandomNumber = Math.floor(Math.random()*3)+1;
@@ -13,31 +14,72 @@ function ComputerValue(){
     }
 }
 
-let com = ComputerValue();
-
-function Result(){
-       if (User == com){
-            prn('비겼습니다.');
-        }else if (User == "가위" && com == "보"){
-            prn('이겼습니다.');
-        }else if (User == "가위" && com == "바위"){
-            prn('졌습니다.');
-        }else if (User == "바위" && com == "보"){
-            prn('졌습니다.');
-        }else if (User == "바위" && com == "가위"){
-            prn('이겼습니다.');
-        }else if (User == "보" && com == "바위"){
-            prn('이겼습니다.');
-        }else if (User == "보" && com == "가위"){
-            prn('졌습니다.');
-        }   
-    data();
+function rock(){
+    let UserChoice = '바위'
+    if (UserChoice == com){
+        draw();
+        document.getElementById('computerImg').src='computer_R.png';
+    } else if (com == "보"){
+        lose();
+        document.getElementById('computerImg').src='computer_P.png';
+    } else if (com == "가위"){
+        win();
+        document.getElementById('computerImg').src='computer_S.png';
     }
+}
 
-    let User = prompt('가위, 바위, 보 중 하나를 입력하세요.');
-    Result();
+function scissors(){
+    let UserChoice = '가위'
+    if (UserChoice == com){
+        draw();
+        document.getElementById('computerImg').src='computer_S.png';
+    } else if (com == "바위"){
+        lose();
+        document.getElementById('computerImg').src='computer_R.png';
+    } else if (com == "보"){
+        win();
+        document.getElementById('computerImg').src='computer_P.png';
+    }
+}
 
-function data(){
-    prn('당신이 낸 것은 <' + User + '> 군요.');
-    prn('컴퓨터는 <' + com +'> 랍니다.');
+function paper(){
+    let UserChoice = '보'
+    if (UserChoice == com){
+        draw();
+        document.getElementById('computerImg').src='computer_P.png';
+    } else if (com == "가위"){
+        lose();
+        document.getElementById('computerImg').src='computer_S.png';
+    } else if (com == "바위"){
+        win();
+        document.getElementById('computerImg').src='computer_R.png';
+    }
+}
+
+function win(){
+    user.innerHTML = "WIN";
+    user.style.color = "red";
+    user.style.backgroundColor = "rgba(255, 0, 0, 0.123)"
+    computer.innerHTML = "LOSE";
+    computer.style.color = "BLUE";
+    computer.style.backgroundColor = "rgba(10, 87, 230, 0.205)"
+    
+}
+
+function lose(){
+    computer.innerHTML = "WIN";
+    computer.style.color = "red";
+    computer.style.backgroundColor = "rgba(255, 0, 0, 0.123)"
+    user.innerHTML = "LOSE";
+    user.style.color = "BLUE";
+    user.style.backgroundColor = "rgba(10, 87, 230, 0.205)"
+}
+
+function draw(){;
+    computer.innerHTML = "DRAW";
+    user.innerHTML = "DRAW";
+    computer.style.color = "red";
+    computer.style.backgroundColor = "rgba(255, 0, 0, 0.123)"
+    user.style.color = "red";
+    user.style.backgroundColor = "rgba(255, 0, 0, 0.123)"
 }
