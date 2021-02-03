@@ -19,7 +19,7 @@ function Result(){
        if (User == com){
             prn('비겼습니다.');
         }else if (User == "가위" && com == "보"){
-            prn('비겼습니다.');
+            prn('이겼습니다.');
         }else if (User == "가위" && com == "바위"){
             prn('졌습니다.');
         }else if (User == "바위" && com == "보"){
